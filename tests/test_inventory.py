@@ -4,9 +4,8 @@ Covers: add/remove-to-cart badge count, sorting, and logout.
 """
 import pytest
 from pages.inventory_page import InventoryPage
-
-BACKPACK = "sauce-labs-backpack"
-BIKE_LIGHT = "sauce-labs-bike-light"
+from pages.login_page import LoginPage
+from utils.sauce_data import BACKPACK, BIKE_LIGHT
 
 
 @pytest.mark.inventory
@@ -46,4 +45,5 @@ class TestInventory:
     @pytest.mark.smoke
     def test_logout_returns_to_login_page(self, logged_in_inventory_page: InventoryPage):
         logged_in_inventory_page.logout()
-        assert logged_in_inventory_page.is_visible("#login-button")
+        login_page = LoginPage(logged_in_inventory_page.page)
+        assert login_page.is_visible(login_page.LOGIN_BUTTON)

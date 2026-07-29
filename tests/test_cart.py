@@ -5,8 +5,8 @@ Covers: added items appear in cart, item removal, and cart -> inventory navigati
 import pytest
 from pages.cart_page import CartPage
 from pages.inventory_page import InventoryPage
+from utils.sauce_data import BACKPACK
 
-BACKPACK = "sauce-labs-backpack"
 BACKPACK_NAME = "Sauce Labs Backpack"
 
 

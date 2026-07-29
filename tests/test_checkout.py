@@ -8,10 +8,8 @@ from pages.checkout_complete_page import CheckoutCompletePage
 from pages.checkout_info_page import CheckoutInfoPage
 from pages.checkout_overview_page import CheckoutOverviewPage
 from pages.inventory_page import InventoryPage
+from utils.sauce_data import BACKPACK, BIKE_LIGHT
 from utils.test_data import random_first_name, random_last_name, random_zip_code
-
-BACKPACK = "sauce-labs-backpack"
-BIKE_LIGHT = "sauce-labs-bike-light"
 
 
 @pytest.mark.checkout

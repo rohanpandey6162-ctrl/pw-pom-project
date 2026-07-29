@@ -11,3 +11,7 @@ PROBLEM_USER = "problem_user"
 PERFORMANCE_GLITCH_USER = "performance_glitch_user"
 ERROR_USER = "error_user"
 VISUAL_USER = "visual_user"
+
+# Product slugs, matching the #add-to-cart-<slug> / #remove-<slug> element IDs
+BACKPACK = "sauce-labs-backpack"
+BIKE_LIGHT = "sauce-labs-bike-light"
