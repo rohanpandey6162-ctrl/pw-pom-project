@@ -25,6 +25,7 @@ class TestCheckout:
         checkout_overview_page: CheckoutOverviewPage,
         checkout_complete_page: CheckoutCompletePage,
     ):
+        """Full happy-path purchase: add items, check out, fill info, confirm order."""
         logged_in_inventory_page.add_to_cart(BACKPACK)
         logged_in_inventory_page.add_to_cart(BIKE_LIGHT)
         logged_in_inventory_page.go_to_cart()
@@ -45,6 +46,7 @@ class TestCheckout:
         cart_page: CartPage,
         checkout_info_page: CheckoutInfoPage,
     ):
+        """Continuing checkout with no customer info shows a required-field error."""
         logged_in_inventory_page.add_to_cart(BACKPACK)
         logged_in_inventory_page.go_to_cart()
         cart_page.checkout()
