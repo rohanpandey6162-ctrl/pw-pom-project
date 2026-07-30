@@ -11,6 +11,7 @@ class CartPage(BasePage):
     URL = "/cart.html"
     CART_ITEM = ".cart_item"
     ITEM_NAME = ".inventory_item_name"
+    ITEM_PRICE = ".inventory_item_price"
     CHECKOUT_BUTTON = "#checkout"
     CONTINUE_SHOPPING_BUTTON = "#continue-shopping"
 
@@ -20,6 +21,10 @@ class CartPage(BasePage):
     # ---------- State ----------
     def get_item_names(self) -> list[str]:
         return self.page.locator(self.ITEM_NAME).all_inner_texts()
+
+    def get_item_prices(self) -> list[float]:
+        raw = self.page.locator(self.ITEM_PRICE).all_inner_texts()
+        return [float(p.replace("$", "")) for p in raw]
 
     def get_item_count(self) -> int:
         return self.page.locator(self.CART_ITEM).count()
