@@ -128,4 +128,4 @@ SauceDemo ships fixed accounts (see `utils/sauce_data.py`), all using password `
 - `problem_user`, `performance_glitch_user`, `error_user`, `visual_user` — available for exploratory/edge-case tests
 
 ## CI
-`.github/workflows/tests.yml` runs the full suite (4 parallel workers) on every push/PR to `main` and uploads the HTML report/screenshots/traces as a build artifact.
+`.github/workflows/tests.yml` runs the full suite (4 parallel workers) on every push/PR to `master` and uploads the HTML report/screenshots/traces as a build artifact.
